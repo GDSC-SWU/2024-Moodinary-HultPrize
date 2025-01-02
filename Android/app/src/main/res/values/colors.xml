@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="dark_90">#333333</color>
+    <color name="dark_80">#47545E</color>
+    <color name="dark_70">#808080</color>
+    <color name="dark_60">#999999</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple">#5F3CAB</color>
+
+    <color name="primary">#66B2FF</color>
+    <color name="perplexity">#FF9ED8</color>
+    <color name="fear">#A884F6</color>
+    <color name="anxiety">#FFAF59</color>
+    <color name="anger">#FF6B6B</color>
+    <color name="sadness">#87CBFF</color>
+    <color name="joy">#FFDF76</color>
+    <color name="chill">#5FD8A6</color>
+    <color name="hope">#9CBF4B</color>
 </resources>
