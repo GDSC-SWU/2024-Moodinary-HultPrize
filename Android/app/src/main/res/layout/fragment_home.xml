@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/home_background"
         android:paddingBottom="50dp">
 
@@ -110,9 +110,9 @@
             android:text="@string/label_diary_create"
             android:textColor="@color/dark_70"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_diary_create_title"
             app:layout_constraintStart_toStartOf="@id/iv_diary_create"
-            app:layout_constraintTop_toTopOf="@id/iv_diary_create"
-            app:layout_constraintBottom_toTopOf="@id/tv_diary_create_title"/>
+            app:layout_constraintTop_toTopOf="@id/iv_diary_create" />
 
         <TextView
             android:id="@+id/tv_diary_create_title"
@@ -124,9 +124,9 @@
             android:text="@string/label_daily_create"
             android:textColor="@color/black"
             android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@id/progressbar"
             app:layout_constraintStart_toStartOf="@id/iv_diary_create"
-            app:layout_constraintTop_toBottomOf="@id/tv_diary_create"
-            app:layout_constraintBottom_toTopOf="@id/progressbar"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_diary_create" />
 
         <ProgressBar
             android:id="@+id/progressbar"
@@ -136,11 +136,12 @@
             android:layout_marginHorizontal="35dp"
             android:layout_marginTop="16dp"
             android:max="100"
+            android:progress="0"
             android:progressDrawable="@drawable/progress_bar_style"
+            app:layout_constraintBottom_toTopOf="@id/tv_emotion_create"
             app:layout_constraintEnd_toEndOf="@id/iv_diary_create"
             app:layout_constraintStart_toStartOf="@id/iv_diary_create"
-            app:layout_constraintTop_toBottomOf="@id/tv_diary_create_title"
-            app:layout_constraintBottom_toTopOf="@id/tv_emotion_create"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_diary_create_title" />
 
         <TextView
             android:id="@+id/tv_emotion_create"
@@ -153,9 +154,9 @@
             android:text="@string/label_emotion_create"
             android:textColor="@color/primary"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_diary_create"
             app:layout_constraintStart_toStartOf="@id/iv_diary_create"
-            app:layout_constraintTop_toBottomOf="@id/progressbar"
-            app:layout_constraintBottom_toBottomOf="@id/iv_diary_create"/>
+            app:layout_constraintTop_toBottomOf="@id/progressbar" />
 
         <ImageView
             android:id="@+id/iv_emotion_create"
@@ -167,9 +168,9 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/description_emotion_create_btn"
             android:src="@drawable/ic_arrow_blue"
+            app:layout_constraintBottom_toBottomOf="@id/iv_diary_create"
             app:layout_constraintStart_toEndOf="@id/tv_emotion_create"
-            app:layout_constraintTop_toBottomOf="@id/progressbar"
-            app:layout_constraintBottom_toBottomOf="@id/iv_diary_create"/>
+            app:layout_constraintTop_toBottomOf="@id/progressbar" />
 
         <TextView
             android:id="@+id/tv_ai_chat_title"
@@ -220,7 +221,6 @@
             android:background="@android:color/transparent"
             android:drawableEnd="@drawable/ic_arrow_gray"
             android:fontFamily="@font/pretendard_semibold"
-            android:padding="0dp"
             android:text="@string/label_solution_btn"
             android:textAlignment="textStart"
             android:textColor="@color/dark_90"
@@ -230,53 +230,60 @@
 
         <Button
             android:id="@+id/btn_solution1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="6dp"
-            android:background="@drawable/btn_solution1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/btn_solution1"
             android:padding="0dp"
             app:layout_constraintBottom_toTopOf="@id/btn_solution3"
+            app:layout_constraintDimensionRatio="1.75:1"
             app:layout_constraintEnd_toStartOf="@id/btn_solution2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_solution" />
 
         <Button
             android:id="@+id/btn_solution2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="6dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="17dp"
             android:background="@drawable/btn_solution2"
             android:padding="0dp"
             app:layout_constraintBottom_toTopOf="@id/btn_solution4"
+            app:layout_constraintDimensionRatio="1.75:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_solution1"
             app:layout_constraintTop_toBottomOf="@id/btn_solution" />
 
         <Button
             android:id="@+id/btn_solution3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="6dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="6dp"
             android:background="@drawable/btn_solution3"
             android:padding="0dp"
+            app:layout_constraintDimensionRatio="1.75:1"
             app:layout_constraintEnd_toStartOf="@id/btn_solution4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_solution1" />
 
         <Button
             android:id="@+id/btn_solution4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="6dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="17dp"
             android:background="@drawable/btn_solution4"
             android:padding="0dp"
+            app:layout_constraintDimensionRatio="1.75:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_solution3"
             app:layout_constraintTop_toBottomOf="@id/btn_solution2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.core.widget.NestedScrollView>

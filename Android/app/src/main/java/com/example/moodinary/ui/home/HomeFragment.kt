@@ -9,8 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.example.moodinary.R
 import com.example.moodinary.databinding.FragmentHomeBinding
+import com.example.moodinary.ui.diary.DiaryFragment
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -32,6 +35,15 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         spanColor()
         dateFormat()
+        binding.ivDiaryCreate.setOnClickListener {
+            setLayout()
+        }
+    }
+
+    private fun setLayout() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, DiaryFragment())
+            .commitNow()
     }
 
     private fun dateFormat() {
@@ -47,6 +59,12 @@ class HomeFragment : Fragment() {
             ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.purple))
         spannableString.setSpan(colorSpan, 8, 18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         binding.tvDiaryCreateTitle.text = spannableString
+
+        val spannableString2 = SpannableString(binding.tvAiChatTitle.text)
+        val colorSpan2 =
+            ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.blue))
+        spannableString2.setSpan(colorSpan2, 18, 25, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        binding.tvAiChatTitle.text = spannableString2
     }
 
     override fun onDestroyView() {

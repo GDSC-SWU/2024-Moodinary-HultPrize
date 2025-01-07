@@ -2,18 +2,17 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background">
         <shape>
-            <solid android:color="#7A8FAC" />
-            <corners android:radius="10dp" /> <!-- 둥근 모서리 설정 -->
-            <size android:height="11dp" /> <!-- 진행 바 배경의 높이 설정 -->
+            <solid android:color="#307A8FAC" />
+            <corners android:radius="10dp" />
         </shape>
     </item>
 
-    <!-- Progress (foreground) with rounded corners -->
     <item android:id="@android:id/progress">
-        <shape>
-            <solid android:color="@color/primary" />
-            <corners android:radius="10dp" /> <!-- 둥근 모서리 설정 -->
-            <size android:height="11dp" /> <!-- 진행 상태의 높이 설정 -->
-        </shape>
+        <clip>
+            <shape>
+                <solid android:color="@color/primary" />
+                <corners android:radius="10dp" />
+            </shape>
+        </clip>
     </item>
 </layer-list>
