@@ -17,4 +17,16 @@
     <string name="description_ai_chat_btn">ai chat button</string>
     <string name="label_solution_title">심신의 안정을 위해서 준비된</string>
     <string name="label_solution_btn">솔루션</string>
+    <string name="description_back_btn">back button</string>
+    <string name="label_diary_title">글 쓰기</string>
+    <string name="label_save">저장</string>
+    <string name="label_date">2024.12.02</string>
+    <string name="label_daily_emotion">오늘의 기분</string>
+    <string name="label_panic">당황</string>
+    <string name="label_anger">분노</string>
+    <string name="label_anxiety">불안</string>
+    <string name="label_joy">기쁨</string>
+    <string name="label_expect">기대</string>
+    <string name="label_stable">안정</string>
+    <string name="hint_write">오늘은 무슨 일이 있었나요?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</string>
 </resources>

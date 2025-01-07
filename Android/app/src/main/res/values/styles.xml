@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RadioButtonText">
+        <item name="android:textColor">@color/dark_90</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">6dp</item>
+    </style>
+
+    <style name="CustomDatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <!-- 상단 색 변경 -->
+        <item name="colorAccent">@color/white</item>
+        <!-- dialog의 배경 변경 -->
+        <item name="background">@color/white</item>
+        <!-- 선택한 날짜를 표시할 색상 -->
+        <item name="colorControlActivated">@color/primary</item>
+        <item name="colorControlHighlight">@color/primary</item>
+        <!-- 취소/확인버튼 색상 -->
+        <item name="android:textColor">@color/dark_90</item>
+        <item name="android:textColorPrimaryInverse">@color/dark_90</item>
+        <item name="android:textColorSecondaryInverse">@color/dark_90</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+</resources>
