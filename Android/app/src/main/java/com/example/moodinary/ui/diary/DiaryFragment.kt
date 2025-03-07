@@ -38,7 +38,7 @@ class DiaryFragment : Fragment() {
         }
         dateFormat()
         DatePicker()
-        ChangedBtnColor()
+        changedBtnColor()
     }
 
     private fun setLayout() {
@@ -84,7 +84,7 @@ class DiaryFragment : Fragment() {
         binding.datePicker.text = formattedDate
     }
 
-    private fun ChangedBtnColor() {
+    private fun changedBtnColor() {
         binding.etWrite.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
                 charSequence: CharSequence?,
