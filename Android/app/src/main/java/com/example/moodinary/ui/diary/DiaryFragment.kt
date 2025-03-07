@@ -43,7 +43,7 @@ class DiaryFragment : Fragment() {
 
     private fun setLayout() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, HomeFragment())
+            .replace(R.id.container_home, HomeFragment())
             .commitNow()
     }
 

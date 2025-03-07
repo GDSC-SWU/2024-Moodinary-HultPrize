@@ -1,11 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Moodinary" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.Moodinary"  parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+<!--        <item name="colorPrimary">@color/primary</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        <item name="android:windowBackground">@color/white</item>-->
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="appBarLayoutStyle">@style/AppTopBar</item>
     </style>
 
     <style name="Theme.Moodinary" parent="Base.Theme.Moodinary" />
