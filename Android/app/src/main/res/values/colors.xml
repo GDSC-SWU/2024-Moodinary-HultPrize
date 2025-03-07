@@ -8,6 +8,7 @@
     <color name="gray">#8E8E93</color>
     <color name="gray_50">#E5E5EA</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
     <color name="purple">#5F3CAB</color>
     <color name="purple_60">#BDA7ED</color>
     <color name="blue">#0084FF</color>

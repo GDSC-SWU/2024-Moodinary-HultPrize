@@ -1,23 +1,15 @@
 <resources>
     <string name="app_name">Moodinary</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="description_home_logo">home logo</string>
-    <string name="description_btn_bell">bell image</string>
-    <string name="description_profile_image">profile image</string>
-    <string name="label_home_date">2024.12.2</string>
-    <string name="label_home_name">반가워요, 은지님 ✨</string>
-    <string name="label_daily_text">어제보다\n더 나은 오늘이 되기를 🍀</string>
-    <string name="discription_btn_diary_create">diary create button</string>
-    <string name="label_diary_create">오늘 하루, 어떠셨나요? ✨</string>
-    <string name="label_daily_create">일기 작성하고\n오늘의 감정 레포트 받아보기</string>
-    <string name="label_emotion_create">감정 추가하기</string>
-    <string name="description_emotion_create_btn">emotion create button</string>
-    <string name="label_ai_chat_title">나를 위로해주는 세심한 목소리, AI Chat</string>
-    <string name="description_ai_chat_btn">ai chat button</string>
-    <string name="label_solution_title">심신의 안정을 위해서 준비된</string>
-    <string name="label_solution_btn">솔루션</string>
-    <string name="description_back_btn">back button</string>
+
+<!--    Home-->
+    <string name="description_logo">무디너리 로고</string>
+    <string name="description_btn_my_page">마이페이지 이동 버튼</string>
+    <string name="description_btn_diary_write">일기 작성 버튼</string>
+    <string name="label_home_date">2월 16일 화요일</string>
+    <string name="label_home_text">은지님의 감정을 기록해볼까요?</string>
+    <string name="label_home_write">작성하러 가기</string>
+
+    <string name="description_back_btn">뒤로 가기</string>
     <string name="label_diary_title">글 쓰기</string>
     <string name="label_save">저장</string>
     <string name="label_date">2024.12.02</string>
@@ -29,4 +21,8 @@
     <string name="label_expect">기대</string>
     <string name="label_stable">안정</string>
     <string name="hint_write">오늘은 무슨 일이 있었나요?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</string>
+    <string name="label_home">홈</string>
+    <string name="label_calender">캘린더</string>
+    <string name="label_diary">일기 작성</string>
+
 </resources>
