@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.moodinary.R
 import com.example.moodinary.databinding.FragmentDiaryBinding
 import com.example.moodinary.ui.home.HomeFragment
+import com.example.moodinary.ui.home.HomeFragmentDirections
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -33,18 +35,16 @@ class DiaryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.ivBack.setOnClickListener {
-            setLayout()
-        }
+        setLayout()
         dateFormat()
         DatePicker()
         changedBtnColor()
     }
 
     private fun setLayout() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container_home, HomeFragment())
-            .commitNow()
+        binding.ivBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     @SuppressLint("DefaultLocale")

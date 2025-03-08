@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.moodinary.R
 import com.example.moodinary.databinding.FragmentCalenderBinding
+import com.prolificinteractive.materialcalendarview.CalendarDay
+import com.prolificinteractive.materialcalendarview.format.ArrayWeekDayFormatter
 
 class CalenderFragment : Fragment() {
     private var _binding : FragmentCalenderBinding? = null
@@ -22,6 +25,14 @@ class CalenderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setCalender()
+    }
+
+    private fun setCalender() {
+        with(binding) {
+            calender.selectedDate = CalendarDay.today()
+            calender.setWeekDayFormatter(ArrayWeekDayFormatter(resources.getTextArray(R.array.custom_weekdays)))
+        }
     }
 
     override fun onDestroyView() {
