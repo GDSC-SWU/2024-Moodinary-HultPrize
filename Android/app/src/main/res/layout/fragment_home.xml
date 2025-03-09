@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,94 +7,111 @@
     android:background="@drawable/background_purple"
     tools:context=".ui.home.HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appbar_home"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:layout_width="match_parent"
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_home"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/iv_home_title"
-                    android:layout_width="104dp"
-                    android:layout_height="23dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="@string/description_logo"
-                    android:src="@drawable/logo_font" />
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|enterAlways">
 
-                <ImageButton
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginEnd="17dp"
-                    android:backgroundTint="@android:color/transparent"
-                    android:contentDescription="@string/description_btn_my_page"
-                    android:src="@drawable/ic_mypage" />
+                    <ImageView
+                        android:id="@+id/iv_home_title"
+                        android:layout_width="104dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/description_logo"
+                        android:src="@drawable/logo_font" />
 
-            </com.google.android.material.appbar.MaterialToolbar>
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="17dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/description_btn_my_page"
+                        android:src="@drawable/ic_mypage" />
 
-        </com.google.android.material.appbar.AppBarLayout>
+                </com.google.android.material.appbar.MaterialToolbar>
 
-        <TextView
-            android:id="@+id/tv_home_date"
-            style="@style/AppTextLabel1.White"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="205dp"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="@string/label_home_date"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appbar_home" />
+            </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/tv_home_diary_write"
-            style="@style/AppTextSubTitle.White"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/pretendard_bold"
-            android:text="@string/label_home_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_home_date" />
+            <TextView
+                android:id="@+id/tv_home_date"
+                style="@style/AppTextLabel1.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="205dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="@string/label_home_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appbar_home" />
 
-        <ImageButton
-            android:id="@+id/btn_home_diary_write"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="33dp"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="@string/description_btn_diary_write"
-            android:src="@drawable/ic_diary_write"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_home_diary_write" />
+            <TextView
+                android:id="@+id/tv_home_diary_write"
+                style="@style/AppTextSubTitle.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/label_home_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_date" />
 
-        <TextView
-            style="@style/AppTextLabel2.White"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="200dp"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="@string/label_home_write"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_home_diary_write" />
+            <ImageButton
+                android:id="@+id/btn_home_diary_write"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="33dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/description_btn_diary_write"
+                android:src="@drawable/ic_diary_write"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_diary_write" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                style="@style/AppTextLabel2.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:paddingBottom="200dp"
+                android:text="@string/label_home_write"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_home_diary_write" />
 
-</androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/view_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_white_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

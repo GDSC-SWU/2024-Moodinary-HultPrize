@@ -15,47 +15,44 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="27dp"
             android:contentDescription="@string/description_back_btn"
-            android:padding="0dp"
             android:src="@drawable/ic_back_x"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_diary_title"
+            style="@style/AppTextLabel1.Gray60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:fontFamily="@font/pretendard_bold"
             android:text="@string/label_diary_title"
-            android:textColor="@color/gray"
-            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
             app:layout_constraintStart_toEndOf="@id/iv_back"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
 
         <TextView
             android:id="@+id/tv_save"
+            style="@style/AppTextLabel1.Gray20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/pretendard_bold"
-            android:text="@string/label_save"
-            android:textColor="@color/purple_60"
-            android:textSize="16sp"
+            android:text="@string/label_wrtie"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/iv_back" />
 
         <TextView
             android:id="@+id/date_picker"
+            style="@style/AppTextLabel1.Gray60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
             android:layout_marginTop="32dp"
             android:fontFamily="@font/pretendard_bold"
             android:text="@string/label_date"
-            android:textColor="@color/gray"
-            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_back" />
 
@@ -71,81 +68,106 @@
 
         <TextView
             android:id="@+id/tv_daily_emotion"
+            style="@style/AppTextLabel1.Gray60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
             android:layout_marginTop="19dp"
             android:fontFamily="@font/pretendard_bold"
             android:text="@string/label_daily_emotion"
-            android:textColor="@color/gray"
-            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider1" />
 
-        <RadioGroup
-            android:id="@+id/radio_group"
-            android:layout_width="match_parent"
+        <HorizontalScrollView
+            android:id="@+id/scroll_view_btn_emotion"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
-            android:orientation="horizontal"
+            android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_daily_emotion">
 
-            <RadioButton
-                android:id="@+id/rb_panic"
-                style="@style/RadioButtonText"
+            <RadioGroup
+                android:id="@+id/radio_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/ic_panic_selected"
-                android:text="@string/label_panic" />
+                android:orientation="horizontal"
+                android:paddingHorizontal="6dp">
 
-            <RadioButton
-                android:id="@+id/rb_anger"
-                style="@style/RadioButtonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/ic_anger_selected"
-                android:text="@string/label_anger" />
+                <RadioButton
+                    android:id="@+id/rb_panic"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_panic_selected"
+                    android:text="@string/label_panic" />
 
-            <RadioButton
-                android:id="@+id/rb_anxiety"
-                style="@style/RadioButtonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/ic_anxiety_selected"
-                android:text="@string/label_anxiety" />
+                <RadioButton
+                    android:id="@+id/rb_anger"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_anger_selected"
+                    android:text="@string/label_anger" />
 
-            <RadioButton
-                android:id="@+id/rb_joy"
-                style="@style/RadioButtonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/ic_joy_selected"
-                android:text="@string/label_joy" />
+                <RadioButton
+                    android:id="@+id/rb_anxiety"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_anxiety_selected"
+                    android:text="@string/label_anxiety" />
 
-            <RadioButton
-                android:id="@+id/rb_expect"
-                style="@style/RadioButtonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/ic_expect_selected"
-                android:text="@string/label_expect" />
+                <RadioButton
+                    android:id="@+id/rb_joy"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_joy_selected"
+                    android:text="@string/label_joy" />
 
-            <RadioButton
-                android:id="@+id/rb_stable"
-                style="@style/RadioButtonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/ic_stable_selected"
-                android:text="@string/label_stable" />
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rb_expect"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_expect_selected"
+                    android:text="@string/label_expect" />
+
+                <RadioButton
+                    android:id="@+id/rb_stable"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_stable_selected"
+                    android:text="@string/label_stable" />
+
+                <RadioButton
+                    android:id="@+id/rb_sad"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_sad_selected"
+                    android:text="@string/label_sad" />
+
+                <RadioButton
+                    android:id="@+id/rb_scared"
+                    style="@style/RadioButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:drawableTop="@drawable/ic_scared_selected"
+                    android:text="@string/label_scared" />
+            </RadioGroup>
+        </HorizontalScrollView>
 
         <View
             android:id="@+id/divider2"
@@ -155,37 +177,28 @@
             android:background="@color/gray_50"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/radio_group" />
+            app:layout_constraintTop_toBottomOf="@id/scroll_view_btn_emotion" />
 
         <EditText
             android:id="@+id/et_write"
-            android:layout_width="match_parent"
+            style="@style/AppTextLabel2.PurplePink"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="17dp"
             android:layout_marginTop="28dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="50dp"
+            android:autofillHints="text"
             android:background="@android:color/transparent"
             android:fontFamily="@font/pretendard_medium"
             android:gravity="top"
             android:hint="@string/hint_write"
-            android:textColor="@color/gray"
-            android:textColorHint="@color/gray"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_write"
+            android:inputType="textMultiLine"
+            android:textColorHint="@color/gray_40"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider2"
             app:layout_constraintVertical_bias="0" />
-
-        <Button
-            android:id="@+id/btn_write"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="17dp"
-            android:background="@drawable/btn_write_unselected"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -9,8 +9,11 @@
     <color name="gray_60">#8E8E93</color>
     <color name="gray_55">#AEAEB2</color>
     <color name="gray_50">#E5E5EA</color>
+    <color name="gray_40">#C8C8D5</color>
+    <color name="gray_20">#CCCCCC</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_60">#99FFFFFF</color>
+    <color name="purple_pink">#A766AD</color>
     <color name="purple">#5F3CAB</color>
     <color name="purple_70">#9F84DE</color>
     <color name="purple_60">#BDA7ED</color>

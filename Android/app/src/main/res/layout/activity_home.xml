@@ -20,15 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/home_graph" />
 
-    <View
-        android:id="@+id/view_gradient"
-        android:layout_width="0dp"
-        android:layout_height="230dp"
-        android:background="@drawable/background_white_gradient"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_home"
         android:layout_width="0dp"
