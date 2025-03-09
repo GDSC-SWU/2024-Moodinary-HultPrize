@@ -24,7 +24,7 @@
     <string name="label_diary_title">글 쓰기</string>
     <string name="label_save">저장</string>
     <string name="label_date">2024.12.02</string>
-    <string name="label_daily_emotion">오늘의 기분</string>
+    <string name="label_daily_emotion">오늘의 기분을 골라보세요</string>
     <string name="label_panic">당황</string>
     <string name="label_anger">분노</string>
     <string name="label_anxiety">불안</string>
@@ -39,5 +39,8 @@
     <string name="description_btn_today_emotion">오늘의 감정 버튼</string>
     <string name="description_btn_free_week_report">주별 감정 리포트 보러가기 버튼</string>
     <string name="label_emotion_percent">내 감정 일치도 93%</string>
+    <string name="label_wrtie">완료</string>
+    <string name="label_sad">슬픔</string>
+    <string name="label_scared">공포</string>
 
 </resources>

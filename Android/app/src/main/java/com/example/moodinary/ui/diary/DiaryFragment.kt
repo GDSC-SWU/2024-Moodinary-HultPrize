@@ -5,15 +5,14 @@ import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.moodinary.R
 import com.example.moodinary.databinding.FragmentDiaryBinding
-import com.example.moodinary.ui.home.HomeFragment
-import com.example.moodinary.ui.home.HomeFragmentDirections
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -37,7 +36,7 @@ class DiaryFragment : Fragment() {
 
         setLayout()
         dateFormat()
-        DatePicker()
+        datePicker()
         changedBtnColor()
     }
 
@@ -48,7 +47,7 @@ class DiaryFragment : Fragment() {
     }
 
     @SuppressLint("DefaultLocale")
-    private fun DatePicker() {
+    private fun datePicker() {
         binding.datePicker.setOnClickListener {
             val calendar = Calendar.getInstance()
             val year = calendar.get(Calendar.YEAR)
@@ -92,7 +91,9 @@ class DiaryFragment : Fragment() {
                 count: Int,
                 after: Int
             ) {
-                binding.btnWrite.setBackgroundResource(R.drawable.btn_write_selected)
+                val color = ContextCompat.getColor(requireContext(), R.color.purple_60)
+                binding.tvSave.setTextColor(color)
+                // binding.btnWrite.setBackgroundResource(R.drawable.btn_write_selected)
             }
 
             override fun onTextChanged(
@@ -101,16 +102,22 @@ class DiaryFragment : Fragment() {
                 before: Int,
                 after: Int
             ) {
-                binding.btnWrite.setBackgroundResource(R.drawable.btn_write_unselected)
+                val color = ContextCompat.getColor(requireContext(), R.color.gray_20)
+                binding.tvSave.setTextColor(color)
+                // binding.btnWrite.setBackgroundResource(R.drawable.btn_write_unselected)
             }
 
             override fun afterTextChanged(editable: Editable?) {
-                if (editable?.length ?: 0 > 0) {
+                if ((editable?.length ?: 0) > 0) {
                     // 텍스트가 있을 때 버튼 색상 변경
-                    binding.btnWrite.setBackgroundResource(R.drawable.btn_write_selected)
+                    val color = ContextCompat.getColor(requireContext(), R.color.purple_60)
+                    binding.tvSave.setTextColor(color)
+                    // binding.btnWrite.setBackgroundResource(R.drawable.btn_write_selected)
                 } else {
                     // 텍스트가 없을 때 버튼 색상 원래대로
-                    binding.btnWrite.setBackgroundResource(R.drawable.btn_write_unselected)
+                    val color = ContextCompat.getColor(requireContext(), R.color.gray_20)
+                    binding.tvSave.setTextColor(color)
+                    // binding.btnWrite.setBackgroundResource(R.drawable.btn_write_unselected)
                 }
             }
         })
