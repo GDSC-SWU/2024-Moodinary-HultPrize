@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.moodinary.databinding.FragmentHomeBinding
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class HomeFragment : Fragment() {
 
@@ -33,6 +36,14 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionHomeToDiary()
             findNavController().navigate(action)
         }
+        setDateFormat()
+    }
+
+    private fun setDateFormat() {
+        val currentDate = Date()
+        val dateFormat = SimpleDateFormat("M월 d일 EEEE", Locale.KOREAN)
+        val formattedDate = dateFormat.format(currentDate)
+        binding.tvHomeDate.text = formattedDate
     }
 
     override fun onDestroyView() {

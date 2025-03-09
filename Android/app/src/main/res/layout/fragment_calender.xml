@@ -1,6 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_purple">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_calender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <ImageView
+                    android:id="@+id/iv_home_title"
+                    android:layout_width="104dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/description_logo"
+                    android:src="@drawable/logo_font" />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="17dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/description_btn_my_page"
+                    android:src="@drawable/ic_mypage" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/iv_calender_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/description_calender_logo"
+            android:src="@drawable/logo_calender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar_calender" />
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_calender"
+            android:elevation="8dp"
+            android:padding="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_calender_logo"
+            app:mcv_arrowColor="@color/black"
+            app:mcv_dateTextAppearance="@style/CalenderDateText"
+            app:mcv_headerTextAppearance="@style/CalenderHeaderText"
+            app:mcv_selectionColor="@color/purple_70"
+            app:mcv_selectionMode="single"
+            app:mcv_tileSize="40dp"
+            app:mcv_weekDayTextAppearance="@style/CalenderWeekText" />
+
+        <ImageView
+            android:id="@+id/btn_today_emotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/description_btn_today_emotion"
+            android:src="@drawable/btn_anger"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calender" />
+
+        <TextView
+            android:id="@+id/tv_today_emotion"
+            style="@style/AppTextTitle.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="@string/label_anger"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_today_emotion"
+            app:layout_constraintStart_toStartOf="@id/btn_today_emotion"
+            app:layout_constraintTop_toTopOf="@id/btn_today_emotion" />
+
+        <TextView
+            android:id="@+id/tv_today_emotion_percent"
+            style="@style/AppTextLabel2.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginBottom="35dp"
+            android:text="@string/label_emotion_percent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_today_emotion"
+            app:layout_constraintStart_toStartOf="@id/btn_today_emotion" />
+
+        <ImageButton
+            android:id="@+id/btn_free_week_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="112dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/description_btn_free_week_report"
+            android:src="@drawable/btn_free_week_report"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_today_emotion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -9,6 +9,17 @@
     <string name="label_home_text">은지님의 감정을 기록해볼까요?</string>
     <string name="label_home_write">작성하러 가기</string>
 
+<!--    Calender-->
+    <string-array name="custom_weekdays">
+        <item>MO</item>
+        <item>TU</item>
+        <item>WE</item>
+        <item>TH</item>
+        <item>FR</item>
+        <item>SA</item>
+        <item>SU</item>
+    </string-array>
+
     <string name="description_back_btn">뒤로 가기</string>
     <string name="label_diary_title">글 쓰기</string>
     <string name="label_save">저장</string>
@@ -24,5 +35,9 @@
     <string name="label_home">홈</string>
     <string name="label_calender">캘린더</string>
     <string name="label_diary">일기 작성</string>
+    <string name="description_calender_logo">캘린더 로고</string>
+    <string name="description_btn_today_emotion">오늘의 감정 버튼</string>
+    <string name="description_btn_free_week_report">주별 감정 리포트 보러가기 버튼</string>
+    <string name="label_emotion_percent">내 감정 일치도 93%</string>
 
 </resources>
