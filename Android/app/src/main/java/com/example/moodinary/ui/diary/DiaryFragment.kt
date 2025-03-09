@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.moodinary.R
 import com.example.moodinary.databinding.FragmentDiaryBinding
+import com.example.moodinary.ui.home.HomeFragmentDirections
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -41,8 +42,14 @@ class DiaryFragment : Fragment() {
     }
 
     private fun setLayout() {
-        binding.ivBack.setOnClickListener {
-            findNavController().navigateUp()
+        with(binding) {
+            ivBack.setOnClickListener {
+                findNavController().navigateUp()
+            }
+            tvSave.setOnClickListener {
+                val action = DiaryFragmentDirections.actionDiaryToLoading()
+                findNavController().navigate(action)
+            }
         }
     }
 

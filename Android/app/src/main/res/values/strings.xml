@@ -42,5 +42,8 @@
     <string name="label_wrtie">완료</string>
     <string name="label_sad">슬픔</string>
     <string name="label_scared">공포</string>
+    <string name="label_loading">로딩</string>
+    <string name="description_loading_image">로딩 이미지</string>
+    <string name="label_loading_text">오늘의 감정을 레포트로 만들고 있어요...</string>
 
 </resources>
