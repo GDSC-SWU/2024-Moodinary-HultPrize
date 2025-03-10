@@ -32,5 +32,14 @@
         android:id="@+id/navigation_loading"
         android:name="com.example.moodinary.ui.result.LoadingFragment"
         android:label="@string/label_loading"
-        tools:layout="@layout/fragment_loading" />
+        tools:layout="@layout/fragment_loading">
+        <action
+            android:id="@+id/action_loading_to_result_keyword"
+            app:destination="@id/navigation_keyword" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_keyword"
+        android:name="com.example.moodinary.ui.result.ResultKeywordFragment"
+        android:label="ResultKeywordFragment"
+        tools:layout="@layout/fragment_result_keyword" />
 </navigation>

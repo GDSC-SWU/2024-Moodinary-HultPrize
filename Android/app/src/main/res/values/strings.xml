@@ -45,5 +45,8 @@
     <string name="label_loading">로딩</string>
     <string name="description_loading_image">로딩 이미지</string>
     <string name="label_loading_text">오늘의 감정을 레포트로 만들고 있어요...</string>
+    <string name="label_result_keyword_text">분석 결과</string>
+    <string name="label_result_keyword_today">은지님의 오늘 키워드</string>
+    <string name="description_keyword_confirm">키워드 확인 버튼</string>
 
 </resources>

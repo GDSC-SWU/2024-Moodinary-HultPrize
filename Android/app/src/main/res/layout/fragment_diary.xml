@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_panic_selected"
+                    android:drawableTop="@drawable/selector_panic"
                     android:text="@string/label_panic" />
 
                 <RadioButton
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_anger_selected"
+                    android:drawableTop="@drawable/selector_anger"
                     android:text="@string/label_anger" />
 
                 <RadioButton
@@ -120,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_anxiety_selected"
+                    android:drawableTop="@drawable/selector_anxiety"
                     android:text="@string/label_anxiety" />
 
                 <RadioButton
@@ -129,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_joy_selected"
+                    android:drawableTop="@drawable/selector_joy"
                     android:text="@string/label_joy" />
 
                 <RadioButton
@@ -138,7 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_expect_selected"
+                    android:drawableTop="@drawable/selector_expect"
                     android:text="@string/label_expect" />
 
                 <RadioButton
@@ -147,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_stable_selected"
+                    android:drawableTop="@drawable/selector_stable"
                     android:text="@string/label_stable" />
 
                 <RadioButton
@@ -156,7 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_sad_selected"
+                    android:drawableTop="@drawable/selector_sad"
                     android:text="@string/label_sad" />
 
                 <RadioButton
@@ -165,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
-                    android:drawableTop="@drawable/ic_scared_selected"
+                    android:drawableTop="@drawable/selector_scared"
                     android:text="@string/label_scared" />
             </RadioGroup>
         </HorizontalScrollView>
@@ -182,7 +182,7 @@
 
         <EditText
             android:id="@+id/et_write"
-            style="@style/AppTextLabel2.PurplePink"
+            style="@style/AppTextLabel3.PurplePink"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="17dp"
