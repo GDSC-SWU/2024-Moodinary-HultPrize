@@ -59,4 +59,8 @@ dependencies {
 
     // Calender
     implementation ("com.github.prolificinteractive:material-calendarview:2.0.0")
+
+    // RecyclerView Flexbox
+    implementation ("com.google.android.flexbox:flexbox:3.0.0")
+
 }

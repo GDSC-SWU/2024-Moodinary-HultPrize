@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_report_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/description_btn_report_back"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_report_date"
+            style="@style/AppTextLabel2.GrayBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="January 2, 2024"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_report_moodie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:contentDescription="@string/description_report_today_moodie"
+            android:src="@drawable/logo_report"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_report_date" />
+
+        <ImageView
+            android:id="@+id/iv_report_emotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/description_report_emotion"
+            android:src="@drawable/background_report_emotion"
+            app:layout_constraintEnd_toStartOf="@id/iv_report_emotion_ai"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_report_moodie" />
+
+        <TextView
+            android:id="@+id/tv_report_emotion"
+            style="@style/AppTextLabel1.Anger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="분노"
+            app:layout_constraintEnd_toEndOf="@id/iv_report_emotion"
+            app:layout_constraintStart_toStartOf="@id/iv_report_emotion"
+            app:layout_constraintTop_toTopOf="@id/iv_report_emotion" />
+
+        <ImageView
+            android:id="@+id/iv_report_emotion_ai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="17dp"
+            android:contentDescription="@string/description_report_emotion_ai"
+            android:src="@drawable/background_report_today_emotion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_report_emotion"
+            app:layout_constraintTop_toBottomOf="@id/iv_report_moodie" />
+
+        <TextView
+            android:id="@+id/tv_report_emotion_ai"
+            style="@style/AppTextTitle.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="분노"
+            app:layout_constraintBottom_toBottomOf="@id/iv_report_emotion_ai"
+            app:layout_constraintStart_toStartOf="@id/iv_report_emotion_ai"
+            app:layout_constraintTop_toTopOf="@id/iv_report_emotion_ai" />
+
+        <TextView
+            android:id="@+id/tv_report_emotion_percent"
+            style="@style/AppTextLabel3.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="35dp"
+            android:text="내 감정 일치도 93%"
+            app:layout_constraintBottom_toBottomOf="@id/iv_report_emotion_ai"
+            app:layout_constraintStart_toStartOf="@id/iv_report_emotion_ai" />
+
+        <View
+            android:id="@+id/view_report_memo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_anger_gradient"
+            app:layout_constraintBottom_toBottomOf="@id/rv_report_keyword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_report_emotion" />
+
+        <ImageView
+            android:id="@+id/iv_report_diary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/description_report_diary"
+            android:src="@drawable/logo_report_memo"
+            app:layout_constraintEnd_toEndOf="@id/view_report_memo"
+            app:layout_constraintStart_toStartOf="@id/view_report_memo"
+            app:layout_constraintTop_toBottomOf="@id/iv_report_emotion" />
+
+        <TextView
+            android:id="@+id/tv_report_diary"
+            style="@style/AppTextLabel3.Dark90"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/label_report_diary"
+            app:layout_constraintEnd_toEndOf="@id/view_report_memo"
+            app:layout_constraintStart_toStartOf="@id/view_report_memo"
+            app:layout_constraintTop_toBottomOf="@id/iv_report_diary" />
+
+        <TextView
+            android:id="@+id/tv_report_keyword"
+            style="@style/AppTextLabel2.Dark90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="은지님의 키워드"
+            app:layout_constraintStart_toStartOf="@id/view_report_memo"
+            app:layout_constraintTop_toBottomOf="@id/tv_report_diary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_report_keyword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/view_report_memo"
+            app:layout_constraintStart_toStartOf="@id/view_report_memo"
+            app:layout_constraintTop_toBottomOf="@id/tv_report_keyword"
+            tools:listitem="@layout/item_report_keyword" />
+
+        <ImageView
+            android:id="@+id/iv_report_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/description_report_mood"
+            android:src="@drawable/background_report_mood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_report_memo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
