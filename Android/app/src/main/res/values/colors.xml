@@ -11,6 +11,7 @@
     <color name="gray_50">#E5E5EA</color>
     <color name="gray_40">#C8C8D5</color>
     <color name="gray_20">#CCCCCC</color>
+    <color name="gray_blue">#8DA8C1</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_60">#99FFFFFF</color>
     <color name="purple_pink">#A766AD</color>
@@ -18,6 +19,7 @@
     <color name="purple_70">#9F84DE</color>
     <color name="purple_60">#BDA7ED</color>
     <color name="blue">#0084FF</color>
+    <color name="gray50_blue">#69829A</color>
 
     <color name="primary">#66B2FF</color>
     <color name="perplexity">#FF9ED8</color>

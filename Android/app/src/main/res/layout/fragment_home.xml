@@ -90,7 +90,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_home_diary_write" />
 
             <TextView
-                style="@style/AppTextLabel2.White"
+                style="@style/AppTextLabel3.White"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
