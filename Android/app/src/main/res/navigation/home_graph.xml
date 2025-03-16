@@ -18,7 +18,7 @@
         android:id="@+id/navigation_calender"
         android:name="com.example.moodinary.ui.calender.CalenderFragment"
         android:label="@string/label_calender"
-        tools:layout="@layout/fragment_calender" >
+        tools:layout="@layout/fragment_calender">
         <action
             android:id="@+id/action_calender_to_report"
             app:destination="@id/navigation_report" />
@@ -45,7 +45,7 @@
         android:id="@+id/navigation_keyword"
         android:name="com.example.moodinary.ui.result.ResultKeywordFragment"
         android:label="@string/label_keyword"
-        tools:layout="@layout/fragment_result_keyword" >
+        tools:layout="@layout/fragment_result_keyword">
         <action
             android:id="@+id/action_keyword_to_report"
             app:destination="@id/navigation_report" />
@@ -53,5 +53,10 @@
     <fragment
         android:id="@+id/navigation_report"
         android:name="com.example.moodinary.ui.result.ResultReportFragment"
-        android:label="@string/label_report_free" />
+        android:label="@string/label_report_free"
+        tools:layout="@layout/fragment_result_report" >
+        <action
+            android:id="@+id/action_report_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>
